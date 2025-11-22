@@ -15,7 +15,7 @@
 - Resume / Cover Letter (Text, PDF, Notion URL)
 - GitHub Repository (Multiple Repos supported)
 - Job Description (URL · 텍스트 · 이미지 · PDF)  
-  세 요소를 증거 기반으로 교차 검증합니다.
+세 요소를 증거 기반으로 교차 검증합니다.
 
 ### 📊 7-Factor AI Evaluation
 구현된 7가지 핵심 기술 지표를 기준으로 정밀 분석합니다.
