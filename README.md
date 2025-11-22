@@ -1,70 +1,57 @@
 # ⭐ FactCheck AI
 
-> 자소서나 이력서의 주장, GitHub 코드, 채용공고(JD)를 AI가 교차 분석하여<br>
-> 지원자의 기술 신뢰도·일관성·실제 실력을 검증하고<br>
-> 개인 맞춤형 압박 면접 시뮬레이션을 제공하는 서비스입니다.<br>
-
+> 자소서나 이력서의 주장, GitHub 코드, 채용공고(JD)를 AI가 교차 분석하여  
+> 지원자의 기술 신뢰도·일관성·실제 실력을 검증하고  
+> 개인 맞춤형 압박 면접 시뮬레이션을 제공하는 서비스입니다.
 
 ![MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 ![React](https://img.shields.io/badge/React-19.0-61DAFB?logo=react)
 ![Gemini](https://img.shields.io/badge/Google%20Gemini-2.5%20Flash-8E75B2?logo=google)
 ![Tailwind](https://img.shields.io/badge/Tailwind-CSS-38B2AC?logo=tailwind-css)
 
-
 # ✨ Features
 
 ### 🔍 3-Way Cross Verification
-
-* Resume / Cover Letter
-* GitHub Repository
-* Job Description (URL · 텍스트 · 이미지 · PDF)
+- Resume / Cover Letter (Text, PDF, Notion URL)
+- GitHub Repository (Multiple Repos supported)
+- Job Description (URL · 텍스트 · 이미지 · PDF)  
   세 요소를 증거 기반으로 교차 검증합니다.
 
-### 🧠 6-Factor AI Evaluation
+### 📊 7-Factor AI Evaluation
+구현된 7가지 핵심 기술 지표를 기준으로 정밀 분석합니다.
+- Architecture  
+- Code Quality  
+- Problem Solving  
+- Tech Proficiency  
+- Project Completeness  
+- Consistency  
+- Growth Potential  
 
-* Architecture
-* Code Quality
-* Consistency (주장 vs 코드)
-* Problem Solving
-* Tech Proficiency
-* Project Completeness
-
-### 🧩 Python/ML Repository Deep Analysis
-
-* PyTorch / TensorFlow 모델 구조
-* 학습 루프 / Forward Pass
-* Dataset & DataLoader
-* Hyperparameter 흔적 분석
+### 🧩 Deep Code Analysis
+- 디렉토리 구조 및 핵심 로직 파일 자동 선별  
+- ML/Python, Java/Spring, TS/React 등 주요 스택 자동 인식  
+- README, package.json, requirements.txt 기반 기술 스택 분석  
 
 ### 📄 Multimodal JD Parsing
-
-* 텍스트 / 이미지(JPG, PNG) / PDF / URL
-* OCR 기반 텍스트 추출
-* JD 구조 자동 재구성
+- 텍스트 / 이미지(JPG, PNG) / PDF / URL  
+- OCR 기반 텍스트 추출 및 JD 재구성  
 
 ### 💬 AI 압박 면접 (Live Interview Mode)
-
-* 레벨별 질문(Intern ~ 5년차)
-* 꼬리 질문 / 추궁 질문
-* 답변 회피 감지 → 감점 및 재질문
-* 시간 제한(Timer) 기능
+- Intern ~ Senior 레벨 질문  
+- 꼬리 질문 / 추궁 질문  
+- 답변 회피 감지  
+- Time Limit Mode 지원  
 
 ### 🌓 Dark / Light Mode
-
-* 화면 우측 하단 플로팅 버튼
-* LocalStorage 기반 모드 저장
-* 전체 UI 실시간 반영
+- 화면 우측 하단 플로팅 버튼  
+- LocalStorage 기반 테마 저장  
+- 전체 페이지 실시간 업데이트  
 
 # 📸 Demo
 
-아래 영상은 전체 사용 흐름을 보여주는 데모입니다.
-
-▶ [Demo Video](https://chatgpt.com/g/g-p-6915dd9bab0c81918cc097363880c31a-saa/c/69218f4f-dd14-8320-b546-5db06a7c695b)
+▶ [Demo Video](https://drive.google.com/file/d/1y1Hk2EWbw0zsDvR3aQDZjSPZr1KQ0BLb/view?usp=sharing)
 
 # 🏗️ Architecture
-
-FactCheck AI는 클라이언트 사이드 논블록킹 아키텍처이며
-GitHub API와 Gemini LLM을 직접 연동하여 실시간 분석을 수행합니다.
 
 ```mermaid
 graph TD
@@ -76,77 +63,78 @@ graph TD
     B -->|Context Assembly| D
     D -->|Analysis JSON Result| B
     B -->|AI Chat| E[Pressure Interview Module]
-```
+````
 
 # 🛠️ Tech Stack
 
-| Category         | Technologies                                      |
-| ---------------- | ------------------------------------------------- |
-| Frontend         | React 19, TypeScript, Vite                        |
-| Styling          | Tailwind CSS, Heroicons                           |
-| AI / LLM         | Google Gemini 2.5 Flash (`@google/generative-ai`) |
-| Data Fetching    | GitHub REST API                                   |
-| Parsing          | PDF/Image → Base64 Multimodal Parsing             |
-| State Management | React Context API (Theme), Local State            |
-| Architecture     | Non-blocking Client-Side SPA                      |
+| Category         | Technologies                  |
+| ---------------- | ----------------------------- |
+| Frontend         | React 19, TypeScript, Vite    |
+| Styling          | Tailwind CSS, Heroicons       |
+| AI / LLM         | Google Gemini 2.5 Flash       |
+| Data Fetching    | GitHub REST API               |
+| Parsing          | PDF/Image → Base64 Multimodal |
+| State Management | React Context API             |
+| Architecture     | Client-Side SPA               |
 
 # 🚀 How to Use
 
 1. 환경 설정
 
-   * 면접 레벨(Intern~Senior)
-   * 답변 제한시간 설정
+   * Intern~Senior 레벨
+   * 타이머 설정
 
-2. JD 입력
+2. 채용공고(JD) 입력
 
-   * 텍스트
-   * URL
-   * PDF/이미지 업로드
+   * 텍스트, URL, 이미지, PDF
 
-3. 이력서/자소서 입력
+3. 지원자 서류 입력
 
-4. GitHub Repository 주소 입력
+   * Resume / Cover Letter (텍스트·PDF·Notion)
+
+4. GitHub Repository 입력
+
+   * 복수 Repo 지원
+   * Private Repo → Token 사용 가능
 
 5. 분석 실행
 
-   * 교차 검증
-   * 코드 기반 증거 수집
-   * 6-Factor 분석 리포트 생성
+   * 7대 기술 지표 산출
+   * 취약점 기반 면접 질문 출력
 
-6. AI 면접 진행
+6. AI 압박 면접 진행
 
-   * 약점 기반 압박 질문
+   * 실시간 타이머
    * 꼬리 질문
-   * 시간 제한 모드
 
-7. 최종 피드백 리포트 확인
+7. 최종 리포트 확인
 
-   * Logic / Honesty / Solution 스코어
-   * 개선을 위한 액션 아이템 제공
+   * Logic Score(5점)
+   * Solution Score(5점)
+   * Total 10점 평가
+   * 개선 Action Items 제공
 
 # 💡 Detailed Features
 
-### 1. 6-Factor Technical Scoring
+### 1. 7-Factor Technical Scoring
 
-* 설계 패턴 정합성
-* 테스트 코드 존재 여부
-* 코드 구조 안정성
-* 예외 처리 수준
-* 자소서 주장 대비 코드 일치도
-* 문서화/README 품질
+* Architecture: 설계 패턴 및 구조
+* Code Quality: 모듈화·네이밍·테스트
+* Problem Solving: 예외 처리/알고리즘
+* Consistency: 자소서 vs 코드 일치도
+* Growth Potential: 리팩토링 흔적 등
 
-### 2. ML/Research Repository Deep Dive
+### 2. Intelligent Interview Feedback
 
-* Vision Transformer 등 복잡한 모델도 분석
-* Forward Pass 추적
-* Loss/Optimizer 구성 분석
-* Custom Dataset 로직 확인
+* Logic Score (5점)
+* Solution Score (5점)
+* Zero Score Penalty 적용
 
 ### 3. Adaptive Persona Interview
 
-* 테마에 따라 면접관 어조 변화
-* 불명확한 답변 → 감점 및 재질문
-* 침묵 시 “처음이라 그래요. 괜찮아요.” 출력
+* 레벨별 질문 깊이 변화
+* 설계 의도/트레이드오프 집요하게 검증
+* Intern 모드에서는 힌트 제공
 
 # 📂 Project Structure
 
@@ -159,7 +147,8 @@ factcheck-ai/
 │   │   ├── Header.tsx
 │   │   ├── InputForm.tsx
 │   │   ├── InterviewChat.tsx
-│   │   └── InterviewFeedback.tsx
+│   │   ├── InterviewFeedback.tsx
+│   │   ├── FloatingThemeToggle.tsx
 │   ├── context/
 │   │   └── ThemeContext.tsx
 │   ├── services/
@@ -171,5 +160,5 @@ factcheck-ai/
 ├── index.html
 ├── metadata.json
 ├── package.json
-└── tailwind.config.js
+└── vite.config.ts
 ```
