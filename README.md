@@ -57,9 +57,9 @@
 
 # 📸 Demo
 
-(GIF 또는 이미지 추가 예정)
+아래 영상은 전체 사용 흐름을 보여주는 데모입니다.
 
-![Demo](./assets/demo.gif)
+▶ [Demo Video](https://chatgpt.com/g/g-p-6915dd9bab0c81918cc097363880c31a-saa/c/69218f4f-dd14-8320-b546-5db06a7c695b)
 
 # 🏗️ Architecture
 
