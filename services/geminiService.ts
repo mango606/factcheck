@@ -199,6 +199,7 @@ export const analyzeCandidate = async (
     
     **TASK 1: Evaluate Metrics (0-100) based on the 7 Criteria Table**:
     Calculate the scores based on technical evidence found in the code.
+    **IMPORTANT**: Score based on the quality and depth of the code, not just by counting false suspicions.
     1. **architecture** (아키텍처): System design, directory structure, separation of concerns.
     2. **codeQuality** (코드 품질): Clean code, variable naming, modularity, dead code presence.
     3. **problemSolving** (문제 해결력): Logic complexity, algorithm usage, handling edge cases.
@@ -362,8 +363,8 @@ export const getInterviewFeedback = async (
     1. **Language**: Korean Only.
     2. **Scoring Rule (CRITICAL)**:
        - If the user response includes "pass", "I don't know", "...", silence, or the interviewer mentioned "답변 시간이 초과되었습니다":
-         -> **STRICTLY SET ALL SCORES (Logic, Honesty, Solution) TO 10 POINTS.** (Do NOT give 0, give 10 as a baseline for participation).
-         -> In 'feedbackSummary', you MUST output exactly: "괜찮아요. 실전에서도 긴장하면 그럴 수 있어요. 처음이라 그래요."
+         -> **STRICTLY SET ALL SCORES (Logic, Honesty, Solution) TO 0 POINTS.** (Answer was missing or invalid).
+         -> In 'feedbackSummary', you MUST output exactly: "답변이 입력되지 않았거나 이해할 수 없어 0점 처리되었습니다. 모르더라도 아는 만큼 논리적으로 설명하는 시도가 필요합니다."
     3. **Evaluation Criteria**:
        - Did they answer within the expectations of a ${level}?
        - Did they prove their contribution?
