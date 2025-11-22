@@ -1,5 +1,3 @@
-
-
 import { GoogleGenAI, Type, Schema } from "@google/genai";
 import { AnalysisResponse, VerdictType, AnalysisItem, ChatMessage, InterviewFeedbackResponse, InputData, InterviewLevel } from '../types';
 
@@ -368,10 +366,10 @@ export const getInterviewFeedback = async (
     **Rules**:
     1. **Language**: Korean Only.
     2. **Scoring Rule (CRITICAL)**:
-       - If the user response includes "pass", "I don't know", "...", silence, or the interviewer mentioned "답변 시간이 초과되었습니다":
-         -> **STRICTLY SET ALL SCORES (Logic, Honesty, Solution) TO 0 POINTS.** (Answer was missing or invalid).
-       - **ZERO SCORE RULE**: If the answer is effectively empty, nonsense, or completely fails to address the question, Score MUST be 0.
-       - In these 0-point cases, 'feedbackSummary' MUST state: "답변이 입력되지 않았거나 이해할 수 없어 0점 처리되었습니다."
+       - **Holistic Evaluation**: Do NOT strictly assign 0 points if the conversation ends with "I don't know", "Pass", or "Time limit exceeded".
+       - **Look at the History**: Evaluate the **ENTIRE conversation history**. If the candidate explained their logic or attempted to answer in previous turns, base the score on those parts.
+       - **Honesty Credit**: If the candidate admits ignorance (e.g., "I don't know") rather than making up a lie, award points for **HonestyScore**.
+       - **Zero Score Condition**: Only assign 0 points if the candidate provided **absolutely no meaningful technical content** or refused to answer from the very beginning.
     3. **Evaluation Criteria**:
        - Did they answer within the expectations of a ${level}?
        - Did they prove their contribution?
