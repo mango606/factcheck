@@ -12,10 +12,10 @@
 # ✨ Features
 
 ### 🔍 3-Way Cross Verification
+세 요소를 증거 기반으로 교차 검증합니다.
 - Resume / Cover Letter (Text, PDF, Notion URL)
 - GitHub Repository (Multiple Repos supported)
 - Job Description (URL · 텍스트 · 이미지 · PDF)  
-세 요소를 증거 기반으로 교차 검증합니다.
 
 ### 📊 7-Factor AI Evaluation
 구현된 7가지 핵심 기술 지표를 기준으로 정밀 분석합니다.
@@ -81,60 +81,60 @@ graph TD
 
 1. 환경 설정
 
-   * Intern~Senior 레벨
-   * 타이머 설정
+   - Intern~Senior 레벨
+   - 타이머 설정
 
 2. 채용공고(JD) 입력
 
-   * 텍스트, URL, 이미지, PDF
+   - 텍스트, URL, 이미지, PDF
 
 3. 지원자 서류 입력
 
-   * Resume / Cover Letter (텍스트·PDF·Notion)
+   - Resume / Cover Letter (텍스트·PDF·Notion)
 
 4. GitHub Repository 입력
 
-   * 복수 Repo 지원
-   * Private Repo → Token 사용 가능
+   - 복수 Repo 지원
+   - Private Repo → Token 사용 가능
 
 5. 분석 실행
 
-   * 7대 기술 지표 산출
-   * 취약점 기반 면접 질문 출력
+   - 7대 기술 지표 산출
+   - 취약점 기반 면접 질문 출력
 
 6. AI 압박 면접 진행
 
-   * 실시간 타이머
-   * 꼬리 질문
+   - 실시간 타이머
+   - 꼬리 질문
 
 7. 최종 리포트 확인
 
-   * Logic Score(5점)
-   * Solution Score(5점)
-   * Total 10점 평가
-   * 개선 Action Items 제공
+   - Logic Score(5점)
+   - Solution Score(5점)
+   - Total 10점 평가
+   - 개선 Action Items 제공
 
 # 💡 Detailed Features
 
 ### 1. 7-Factor Technical Scoring
 
-* Architecture: 설계 패턴 및 구조
-* Code Quality: 모듈화·네이밍·테스트
-* Problem Solving: 예외 처리/알고리즘
-* Consistency: 자소서 vs 코드 일치도
-* Growth Potential: 리팩토링 흔적 등
+- Architecture: 설계 패턴 및 구조
+- Code Quality: 모듈화·네이밍·테스트
+- Problem Solving: 예외 처리/알고리즘
+- Consistency: 자소서 vs 코드 일치도
+- Growth Potential: 리팩토링 흔적 등
 
 ### 2. Intelligent Interview Feedback
 
-* Logic Score (5점)
-* Solution Score (5점)
-* Zero Score Penalty 적용
+- Logic Score (5점)
+- Solution Score (5점)
+- Zero Score Penalty 적용
 
 ### 3. Adaptive Persona Interview
 
-* 레벨별 질문 깊이 변화
-* 설계 의도/트레이드오프 집요하게 검증
-* Intern 모드에서는 힌트 제공
+- 레벨별 질문 깊이 변화
+- 설계 의도/트레이드오프 집요하게 검증
+- Intern 모드에서는 힌트 제공
 
 # 📂 Project Structure
 
