@@ -9,6 +9,12 @@
 ![Gemini](https://img.shields.io/badge/Google%20Gemini-2.5%20Flash-8E75B2?logo=google)
 ![Tailwind](https://img.shields.io/badge/Tailwind-CSS-38B2AC?logo=tailwind-css)
 
+📝 [발표자료 ↗](https://github.com/saa-hackathon-2025/factcheck/blob/main/4%E1%84%90%E1%85%B5%E1%86%B7%20%E1%84%87%E1%85%A1%E1%86%AF%E1%84%91%E1%85%AD%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD.pdf)
+
+📸 [Demo Video ↗](https://www.youtube.com/watch?v=lmKNzcXLfa8)
+
+<br>
+
 # ✨ Features
 
 ### 🔍 3-Way Cross Verification
@@ -47,10 +53,6 @@
 - LocalStorage 기반 테마 저장  
 - 전체 페이지 실시간 업데이트  
 
-# 📸 Demo
-
-▶ [Demo Video](https://www.youtube.com/watch?v=lmKNzcXLfa8)
-
 # 🏗️ Architecture
 
 ```mermaid
@@ -79,35 +81,59 @@ graph TD
 
 # 🚀 How to Use
 
-1. 환경 설정
+## Step 1. Input (원클릭 면접 준비)
+
+<div align="center">
+  <br>
+  <img src="https://github.com/user-attachments/assets/d6c7bc45-116e-46c7-99f2-ef3d6fba15f7" alt="Step1 4x" width="65%">
+  <br><br>
+</div>
+
+- 환경 설정
 
    - Intern~Senior 레벨
    - 타이머 설정
 
-2. 채용공고(JD) 입력
+- 채용공고(JD) 입력 : 텍스트 / URL / 이미지 / PDF
 
-   - 텍스트, URL, 이미지, PDF
+- 지원자 서류 입력 : Resume / Cover Letter (텍스트·PDF·Notion)
 
-3. 지원자 서류 입력
-
-   - Resume / Cover Letter (텍스트·PDF·Notion)
-
-4. GitHub Repository 입력
+- GitHub Repository 입력
 
    - 복수 Repo 지원
    - Private Repo → Token 사용 가능
 
-5. 분석 실행
+## Step 2. Analysis (진위 판독 및 질문 도출)
+
+<div align="center">
+  <br>
+  <img src="https://github.com/user-attachments/assets/9fe384be-02eb-4c9b-b95e-49f90cbd5992" alt="Step2 4x" width="65%">
+  <br><br>
+</div>
 
    - 7대 기술 지표 산출
    - 취약점 기반 면접 질문 출력
 
-6. AI 압박 면접 진행
+## Step 3. Action (실전 디펜스 & 피드백)
+
+<div align="center">
+  <br>
+  <img src="https://github.com/user-attachments/assets/e563090b-d490-4035-a9d5-7219919def80" alt="Step3-1 60x" width="65%">
+  <br><br>
+</div>
+
+- AI 압박 면접 진행
 
    - 실시간 타이머
    - 꼬리 질문
 
-7. 최종 리포트 확인
+<div align="center">
+  <br>
+  <img src="https://github.com/user-attachments/assets/cba13198-6432-4fed-a303-1454d97e5627" alt="Step3-2 6x" width="65%">
+  <br><br>
+</div>
+
+- 최종 리포트 확인
 
    - Logic Score(5점)
    - Solution Score(5점)
